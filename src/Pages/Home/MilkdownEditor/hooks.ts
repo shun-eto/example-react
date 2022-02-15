@@ -18,20 +18,19 @@ import {
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (props: MilkdownEditorProps) => {
 	const editor = useEditor((root, renderReact) => {
-		const nodes = commonmark.configure(bulletList, {
-			keymap: {
-				[SupportedKeys.BulletList]: "Mod-]",
-			},
-		});
-		// .configure(paragraph, {
-		// 	className: () => "my-custom-paragraph",
-		// })
-		// .configure(heading, {
-		// 	className: (attrs) => `my-custom-heading my-h${attrs.level}`,
-		// })
-		// .configure(bulletList, {
-		// 	className: () => `my-custom-bullet-list`,
-		// });
+		const nodes = commonmark
+			.configure(paragraph, {
+				className: () => "my-custom-paragraph",
+			})
+			.configure(heading, {
+				className: (attrs) => `my-custom-heading my-h${attrs.level}`,
+			})
+			.configure(bulletList, {
+				className: () => `my-custom-bullet-list`,
+				// keymap: {
+				// 	[SupportedKeys.BulletList]: "Mod-]",
+				// },
+			});
 		return Editor.make()
 			.config((ctx) => {
 				ctx.set(rootCtx, root);

@@ -5,12 +5,10 @@ import "material-icons/css/material-icons.css";
 import { QuillEditor } from "./Quill";
 import { TinyMceEditor } from "./TinyMce";
 import { EditorJS } from "./EditorJS";
+import { MilkdownEditor2 } from "./MilkdownEditor2";
 
 export const Home: React.FC = () => {
-	const [markdown, setMarkdown] = useState(`
-	default-value
-
-test`);
+	const [markdown, setMarkdown] = useState("default-value");
 	const { EditorWrapper } = styles;
 
 	const handleMarkdownChange = useCallback((markdown: string) => {
@@ -19,7 +17,7 @@ test`);
 
 	return (
 		<div id="home">
-			<EditorWrapper>
+			{/* <EditorWrapper>
 				EditorJS
 				<EditorJS />
 			</EditorWrapper>
@@ -35,10 +33,14 @@ test`);
 					markdown={markdown}
 					onChange={(content) => setMarkdown(content)}
 				/>
-			</EditorWrapper>
+			</EditorWrapper> */}
 			<EditorWrapper>
 				MilkdownEditor
 				<MilkdownEditor markdown={markdown} onChange={handleMarkdownChange} />
+			</EditorWrapper>
+
+			<EditorWrapper>
+				<MilkdownEditor2 />
 			</EditorWrapper>
 		</div>
 	);

@@ -1,91 +1,94 @@
 {
-  "name": "example-react",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@editorjs/code": "^2.7.0",
-    "@editorjs/editorjs": "^2.23.2",
-    "@editorjs/paragraph": "^2.8.0",
-    "@editorjs/table": "^2.0.1",
-    "@emotion/css": "^11.7.1",
-    "@emotion/react": "^11.7.0",
-    "@emotion/styled": "^11.6.0",
-    "@material-ui/core": "^4.12.3",
-    "@milkdown/core": "^5.5.0",
-    "@milkdown/plugin-emoji": "^5.5.0",
-    "@milkdown/plugin-history": "^5.5.0",
-    "@milkdown/plugin-indent": "^5.5.0",
-    "@milkdown/plugin-listener": "^5.5.0",
-    "@milkdown/plugin-menu": "^5.5.0",
-    "@milkdown/plugin-slash": "^5.5.0",
-    "@milkdown/plugin-tooltip": "^5.5.0",
-    "@milkdown/preset-commonmark": "^5.5.0",
-    "@milkdown/preset-gfm": "^5.5.0",
-    "@milkdown/prose": "^5.5.0",
-    "@milkdown/react": "^5.5.0",
-    "@milkdown/theme-nord": "^5.5.0",
-    "@mui/icons-material": "^5.4.1",
-    "@mui/material": "^5.4.1",
-    "@mui/styled-engine": "^5.2.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@tinymce/tinymce-react": "^3.13.0",
-    "@toast-ui/editor": "^3.1.3",
-    "@toast-ui/react-editor": "^3.1.3",
-    "@types/jest": "^26.0.15",
-    "@types/marked": "^4.0.2",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@types/turndown": "^5.0.1",
-    "@uiw/react-md-editor": "^3.9.4",
-    "add": "^2.0.6",
-    "marked": "^4.0.12",
-    "material-design-icons": "^3.0.1",
-    "material-icons": "^1.10.6",
-    "quill-markdown-shortcuts": "^0.0.10",
-    "quill-mention": "^3.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-editor-js": "^2.0.6",
-    "react-loading-skeleton": "^3.0.3",
-    "react-markdown": "^8.0.0",
-    "react-quill": "^1.3.5",
-    "react-scripts": "4.0.3",
-    "rich-markdown-editor": "^11.21.3",
-    "styled-components": "^5.3.3",
-    "trix": "^2.0.0-alpha.0",
-    "turndown": "^7.1.1",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1",
-    "yarn": "^1.22.17"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@editorjs/checklist": "^1.3.0"
-  }
+	"name": "example-react",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@editorjs/code": "^2.7.0",
+		"@editorjs/editorjs": "^2.23.2",
+		"@editorjs/paragraph": "^2.8.0",
+		"@editorjs/table": "^2.0.1",
+		"@emotion/css": "^11.7.1",
+		"@emotion/react": "^11.7.0",
+		"@emotion/styled": "^11.6.0",
+		"@material-ui/core": "^4.12.3",
+		"@milkdown/core": "^5.5.0",
+		"@milkdown/plugin-emoji": "^5.5.0",
+		"@milkdown/plugin-history": "^5.5.0",
+		"@milkdown/plugin-indent": "^5.5.0",
+		"@milkdown/plugin-listener": "^5.5.0",
+		"@milkdown/plugin-menu": "^5.5.0",
+		"@milkdown/plugin-prism": "^5.5.0",
+		"@milkdown/plugin-slash": "^5.5.0",
+		"@milkdown/plugin-table": "^5.3.1",
+		"@milkdown/plugin-tooltip": "^5.5.0",
+		"@milkdown/preset-commonmark": "^5.5.0",
+		"@milkdown/preset-gfm": "^5.5.0",
+		"@milkdown/prose": "^5.5.0",
+		"@milkdown/react": "^5.5.0",
+		"@milkdown/theme-nord": "^5.5.0",
+		"@mui/icons-material": "^5.4.1",
+		"@mui/material": "^5.4.1",
+		"@mui/styled-engine": "^5.2.0",
+		"@testing-library/jest-dom": "^5.11.4",
+		"@testing-library/react": "^11.1.0",
+		"@testing-library/user-event": "^12.1.10",
+		"@tinymce/tinymce-react": "^3.13.0",
+		"@toast-ui/editor": "^3.1.3",
+		"@toast-ui/react-editor": "^3.1.3",
+		"@types/jest": "^26.0.15",
+		"@types/marked": "^4.0.2",
+		"@types/node": "^12.0.0",
+		"@types/react": "^17.0.0",
+		"@types/react-dom": "^17.0.0",
+		"@types/turndown": "^5.0.1",
+		"@uiw/react-md-editor": "^3.9.4",
+		"add": "^2.0.6",
+		"marked": "^4.0.12",
+		"material-design-icons": "^3.0.1",
+		"material-icons": "^1.10.6",
+		"milkdown-plugin-shiki": "^0.1.1",
+		"quill-markdown-shortcuts": "^0.0.10",
+		"quill-mention": "^3.1.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-editor-js": "^2.0.6",
+		"react-loading-skeleton": "^3.0.3",
+		"react-markdown": "^8.0.0",
+		"react-quill": "^1.3.5",
+		"react-scripts": "4.0.3",
+		"rich-markdown-editor": "^11.21.3",
+		"styled-components": "^5.3.3",
+		"trix": "^2.0.0-alpha.0",
+		"turndown": "^7.1.1",
+		"typescript": "^4.1.2",
+		"web-vitals": "^1.0.1",
+		"yarn": "^1.22.17"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@editorjs/checklist": "^1.3.0"
+	}
 }
