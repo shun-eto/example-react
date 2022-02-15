@@ -16,13 +16,13 @@ const StyledPaper = styled((props: TextFieldProps) => <TextField {...props} />)(
 	}
 );
 
-const MarkdownEditorWrapper = styled("div")(({ theme }) => ({
-	padding: 16,
+const EditorWrapper = styled("div")(({ theme }) => ({
+	padding: 32,
 }));
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
 	Wrapper,
 	StyledPaper,
-	MarkdownEditorWrapper,
+	EditorWrapper,
 };
