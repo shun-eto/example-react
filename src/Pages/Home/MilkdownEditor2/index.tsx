@@ -1,33 +1,53 @@
 import { defaultValueCtx, Editor, rootCtx } from "@milkdown/core";
-import { listener, listenerCtx } from "@milkdown/plugin-listener";
-import { commonmark } from "@milkdown/preset-gfm";
-import { ReactEditor, useEditor } from "@milkdown/react";
-import { nordLight, nord } from "@milkdown/theme-nord";
-import { useState } from "react";
-import { slash } from "@milkdown/plugin-slash";
-import { table } from "@milkdown/plugin-table";
-import { menu } from "@milkdown/plugin-menu";
+import { gfm } from "@milkdown/preset-gfm";
+import { emoji } from "@milkdown/plugin-emoji";
 import { prism } from "@milkdown/plugin-prism";
-import { shiki } from "milkdown-plugin-shiki";
+import { tooltip } from "@milkdown/plugin-tooltip";
+import { slash } from "@milkdown/plugin-slash";
+import { useState } from "react";
+import { ReactEditor, useEditor } from "@milkdown/react";
+import { nes } from "./nes";
+
+const defaultValue = `
+# :checkered_flag: Milkdown NES
+
+![paper](https://images.hdqwalls.com/wallpapers/8-bit-pixel-art-city-2o.jpg)
+
+\`\`\`typescript
+const milkdown = "magic";
+\`\`\`
+
+* The [lunatic](https://github.com/Saul-Mirone/milkdown) is on the grass
+* The lunatic is in the hall
+
+| Theme | Keywords |
+| -------- | ----- |
+| Nes | Cyberpunk |
+| Nord | Elegant |
+`;
 
 export const MilkdownEditor2: React.FC = () => {
 	const [markdown, setMarkdown] = useState("");
 
 	const editor = useEditor((root, renderReact) => {
-		return Editor.make()
-			.config((ctx) => {
-				ctx.set(rootCtx, root);
-				// ctx.set(defaultValueCtx, markdown);
-				// ctx.get(listenerCtx).markdownUpdated((_, markdown) => {
-				// 	setMarkdown(markdown);
-				// });
-			})
-			.use(nord)
-			.use(commonmark)
-			.use(prism)
-			.use(slash)
-			.use(menu())
-			.use(listener);
+		return (
+			Editor.make()
+				.config((ctx) => {
+					ctx.set(rootCtx, root);
+					ctx.set(defaultValueCtx, defaultValue);
+					// ctx.get(listenerCtx).markdownUpdated((_, markdown) => {
+					// 	setMarkdown(markdown);
+					// });
+				})
+				// .use(nord)
+				// .use(commonmark)
+				.use(nes)
+				.use(gfm)
+				.use(emoji)
+				.use(tooltip)
+				.use(slash)
+				.use(prism)
+		);
 	});
 
 	return (

@@ -34,10 +34,10 @@ export const Home: React.FC = () => {
 					onChange={(content) => setMarkdown(content)}
 				/>
 			</EditorWrapper> */}
-			<EditorWrapper>
+			{/* <EditorWrapper>
 				MilkdownEditor
 				<MilkdownEditor markdown={markdown} onChange={handleMarkdownChange} />
-			</EditorWrapper>
+			</EditorWrapper> */}
 
 			<EditorWrapper>
 				<MilkdownEditor2 />
